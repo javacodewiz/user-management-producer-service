@@ -1,0 +1,48 @@
+server:
+  port: 7001
+
+spring:
+  application:
+    name: "user-management-producer-service"
+  datasource:
+    url: jdbc:mysql://localhost:3306/usermanagement?allowPublicKeyRetrieval=true&useSSL=false
+    driver-class-name: com.mysql.cj.jdbc.Driver
+    username: root
+    password: root
+  jpa:
+    properties:
+      hibernate:
+        format_sql: true
+    database-platform: org.hibernate.dialect.MySQLDialect
+    hibernate:
+      ddl-auto: update
+    show-sql: true
+
+logging:
+  level:
+    root: Debug
+
+management:
+  endpoints:
+    web:
+      exposure:
+        include: "*"
+  info:
+    env:
+      enabled: true
+  endpoint:
+    health:
+      show-details: always
+
+info:
+  app: user management App
+  name: user-management-producer-service
+  virsion: 0.0.1
+  description: user management using Spring Boot and kafka
+
+# configure health related endpoints
+
+
+
+
+
