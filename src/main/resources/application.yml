@@ -34,7 +34,7 @@ management:
     health:
       show-details: always
     shutdown:
-      access: true
+      enabled: true
 
 info:
   app: user management App
